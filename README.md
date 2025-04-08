@@ -1,4 +1,4 @@
-Here's the updated version of the documentation with the addition of connecting the backend Laravel to the frontend using the `VITE_API_URL` environment variable.
+Here's the updated version of the documentation with the addition to use the admin account:
 
 ---
 
@@ -103,7 +103,21 @@ This sets up an environment variable for the API URL. Make sure your Laravel bac
 
 ---
 
-## Step 5: Run the Development Server
+## Step 5: Create an Admin Account in Laravel (Optional)
+
+To use an admin account for authentication or testing, you can create a user with the following details:
+
+```php
+'full_name' => 'Admin',
+'email' => 'admin@gmail.com',
+'password' => bcrypt('admin123'),
+```
+
+Ensure this account is created in your Laravel database (you can use a seeder or manually add it). This admin user can then access any routes or functionalities that require admin privileges.
+
+---
+
+## Step 6: Run the Development Server
 
 Vite provides a fast development server that you can use to run your project locally.
 
@@ -124,7 +138,7 @@ Your Vue frontend should now be connected to the backend Laravel API via the `VI
 
 ---
 
-## Step 6: Optional: Build the Project for Production
+## Step 7: Optional: Build the Project for Production
 
 Once you're ready to deploy your Vue 3 + TypeScript + Vite project to production, you can create an optimized production build using the following command:
 
@@ -136,7 +150,7 @@ This will create a production-ready build in the `dist/` folder.
 
 ---
 
-## Step 7: Optional: Configure IDE Support
+## Step 8: Optional: Configure IDE Support
 
 To maximize productivity, ensure your IDE is properly configured for Vue 3 and TypeScript. Popular IDEs like **VS Code** work well with Vue 3 and TypeScript with the following extensions:
 
@@ -153,7 +167,7 @@ To maximize productivity, ensure your IDE is properly configured for Vue 3 and T
 
 ---
 
-## Step 8: Debugging and Troubleshooting
+## Step 9: Debugging and Troubleshooting
 
 If you encounter any issues, here are some common solutions:
 
